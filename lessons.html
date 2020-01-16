@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+.container {
+	width: 960px;
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+/* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+header {
+	background: #ADB96E;
+}
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the block elements. The elements within these blocks have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the block itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the block element and place a second block element within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a block set to float right). Many times, padding can be used instead. For blocks where this rule must be broken, you should add a "display:inline" declaration to the block element's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar blocks could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the blocks around in the HTML source.
+
+*/
+.sidebar1 {
+	float: right;
+	width: 180px;
+	background: #EADCAE;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	width: 780px;
+	float: right;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+nav ul {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+nav ul li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+nav ul a, nav ul a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #C6D580;
+}
+nav ul a:hover, nav ul a:active, nav ul a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+footer {
+	padding: 10px 0;
+	background: #CCC49F;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, nav, article, figure {
+	display: block;
+}
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="dwdriver.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <a href="#"><img src="" alt="Insert Logo Here" width="180" height="90" id="Insert_logo" style="background: #C6D580; display:block;" /></a>
+  </header>
+  <div class="sidebar1">
+    <nav>
+      <ul>
+        <li><a href="#">Link one</a></li>
+        <li><a href="#">Link two</a></li>
+        <li><a href="#">Link three</a></li>
+        <li><a href="#">Link four</a></li>
+      </ul>
+    </nav>
+    <aside>
+      <p> The above links demonstrate a basic navigational structure using an unordered list styled with CSS. Use this as a starting point and modify the properties to produce your own unique look. If you require flyout menus, create your own using a Spry menu, a menu widget from Adobe's Exchange or a variety of other javascript or CSS solutions.</p>
+      <p>If you would like the navigation along the top, simply move the ul to the top of the page and recreate the styling.</p>
+    </aside>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+    <h1>Training</h1>
+    <section>
+     <h2>‘Pay As You Learn’ Driving Lessons    £22 per hour or £205 for 10</h2>
+     <p>You can always pay for your driving lessons on a Pay-As -You-Go basis.  This is the most popular and flexible way to book and pay for your driving lessons.  Lesson times  and lesson pick up/drop off points are fully flexible to suit you, so why not learn to drive on the way to  college or work for example?</p>
+      <p>Lesson duration is also fully flexible to optimise your learning, you can book one hour, two hour or even one and a half hour time slots, all charged at the same hourly rate.  No need to pay large sums of money up front.</p>
+    </section>
+    <section>
+      <h2>Pass+ Plus Course    £150      </h2>
+      <p>Passed your driving test?  Why not hone your driving skills and save money on your car insurance with our Pass+ Plus Course. Pass Plus was introduced by the Driving Standards Agency to improve new driver’s skills and reduce the amount of accidents that new drivers are involved in.  The course consists of 6 different modules covering night driving, motorways, dual carriageways, all weather driving, country roads and town driving.  There is NO test at the end, the training is signed off by the instructor and sent to the DSA who will send you a Pass+ Plus certificate. </p>
+      <p>Car insurance can be expensive, especially for young people.  Take advantage of the Pass+ Plus course and not only improve your driving skills, but save money on your car insurance too!  Most insurers will give a discount of up to 40% for people who have completed the course.</p>
+      <p>The Pass+ Plus course can be completed in just one day (6 hours). </p>
+    </section>
+    <section>
+      <h2>Eco-Safe Driving Course    £49      </h2>
+      <p>With the price if fuel currently running at around £6 a gallon, increasing the amount of miles travelled per gallon has become high on many people’s agenda. </p>
+      <p>Wouldn’t it be great if you could cut your fuel bills by around 18% by applying a series of simple techniques whilst also improving safety and prolonging the life of your vehicle?  Does this sound too good to be true?  Very few people drive in a way that fully utilises the advances in modern engineering to the full.  I can, in a easy easy to understand way, maximise your mpg whilst often also reducing journey times (within the law of course).</p>
+      <p>This 2-hour course starts with a short in car presentation followed by two identical drives of around 35 to 40 minutes each.  After I analyse your first drive, I’ll explain how you can make savings.  During your second drive you will be fully coached in the Eco-safe methods and afterwards you will be shown the improvement made on the car’s on board computer. </p>
+    </section>
+    <section>
+      <h2>Refresher/Advanced Driving Lessons    £22 per hour      </h2>
+      <p>Refresher/advanced driving lessons are available to any qualified driver who wants to improve their driving skills.  These lessons can be especially helpful for drivers who have taken a brake from driving, or have passed their driving test but haven’t driven for a while.  During these lessons I focus on building your confidence.  If you are a nervous driver, I can help you overcome your driving fears. </p>
+      <p>When starting refresher/advanced lessons, we will discuss exactly what you would like to achieve and set out a course of lessons to achieve those goals.  Lessons focus on safety, anticipation/planning and a smooth progressive drive. </p>
+      <p>There are many reasons why I get asked to help qualified drivers improve their skills, like: Confidence Building, Driving Phobias,. Manoeuvering, Country Roads, Motorways, Parking (like multi storey car parks) and Night Driving for example.</p>
+      <p>I can help any driver be more skilled, more confident and safer on the road. </p>
+    </section>
+    <h2>Introduction to Driving in the UK    £49</h2>
+    <p>This 2 hour course is especially designed to help foreign licence holders get used to driving in the UK.  Driving on the left is new to most foreign license holders and the UK will also have many unfamiliar  rules of the road.  This course takes two hours during which rules and common pitfalls will be explained and practical experience is gained in a safe and controlled environment.</p>
+    <p>I know that driving in a different country can be a challenge - my wife is dutch and we both regularly drive on the continent in both right hand and left hand drive vehicles, so I am very aware of many of the difficulties faced. </p>
+    <p>WANT TO GET A UK DRIVING LICENCE?  -  I have also helped many foreign licence holders on an international permit gain a full UK licence.  I will be able to give you an idea of how close you are to UK test standard during the Introduction to Driving in the UK course, or you can book hourly driving lessons. </p>
+    <!-- end .content --></article>
+  <footer>
+    <p>This footer contains the declaration position:relative; to give Internet Explorer 6 hasLayout for the footer and cause it to clear correctly. If you're not required to support IE6, you may remove it.</p>
+    <address>
+      Address Content
+    </address>
+  </footer>
+  <!-- end .container --></div>
+</body>
+</html>
